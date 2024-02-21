@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Criação de Personagem</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" media="screen" >
+</head>
+<body>
+    <div class="main-container">
+        <div class="header"></div>
+        <div class="form-container">
+            <div class="form-title"><h1>Formulário de Cadastro de Médiuns</h1></div>
+            <div class="form-box">
+                <form method="post" id="cadastro">
+
+                    <div class="linha-um" id="linha-um-form">
+                        <div class="form-input" id="div-nome">
+                            <label for="nome">Nome: </label>
+                            <input type="text" id="nome" name="nome"/>
+                        </div>
+                    
+                        <div class="form-input" id="div-sobrenome">
+                            <label for="sobrenome">Sobrenome: </label>
+                            <input type="text" id="sobrenome" nome="sobrenome" />
+                        </div>
+                    </div>
+
+                    <div class="form-input" id="div-aniversario">
+                        <label for="aniversario ">Data de Aniversario: </label>
+                        <input type="date" id="aniversario" name="aniversario" />
+                    </div>
+
+                    <!-- Deixar os signos Dinâmicos -->
+                    <!--
+                    <div class="form-input" id="signo">
+                        <label for="signo">Signo: </label>
+                        <select name="signo" id="signo"    
+                    </div>
+                    -->
+                    
+                    <div class="form-input" id="div-sacerdócio">
+                        <label form="sacerdocio">Possui Sacerdócio? </label>
+                        <input type="radio" id="sacerdocio" name="sacerdocio" value="sim" checked /> Sim
+                        <input type="radio" id="sacerdocio" name="sacerdocio" value="nao" /> Não
+                    </div>
+
+
+                    <div class="form-input" id="div-cabolco">
+                        <label for="caboclo">Caboclo-Chefe: </label>
+                        <input type="text" id="caboclo" nome="caboclo" />
+                    </div>
+
+                    <div class="form-submit" id="div-submit">
+                        <input type="submit" value="Enviar" />  
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>    
+</body>
+</html>
