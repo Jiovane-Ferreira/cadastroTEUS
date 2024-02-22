@@ -5,6 +5,7 @@
 }
 
 .main-container {
+    background-image: url(/assets/images/devon-mackay-DkbJeXOO644-unsplash.jpg);
     background-color: #993399;
     display: flex;
     justify-content: center;
@@ -14,7 +15,7 @@
 }
 
 .form-container {
-    border: 3px red solid;
+    border: 3px #993399 solid;
     border-radius: 10px;
     background-color: #FFF;
     display: flex;
