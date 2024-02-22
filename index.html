@@ -12,7 +12,7 @@
         <div class="form-container">
             <div class="form-title"><h1>Formulário de Cadastro de Médiuns</h1></div>
             <div class="form-box">
-                <form method="post" id="cadastro">
+                <form method="post" action="connection.php" id="cadastro">
 
                     <div class="linha-um" id="linha-um-form">
                         <div class="form-input" id="div-nome">
@@ -22,7 +22,7 @@
                     
                         <div class="form-input" id="div-sobrenome">
                             <label for="sobrenome">Sobrenome: </label>
-                            <input type="text" id="sobrenome" nome="sobrenome" />
+                            <input type="text" id="sobrenome" name="sobrenome" />
                         </div>
                     </div>
 
@@ -41,20 +41,20 @@
                     
                     <div class="form-input" id="div-sacerdócio">
                         <label form="sacerdocio">Possui Sacerdócio? </label>
-                        <input type="radio" id="sacerdocio" name="sacerdocio" value="sim" checked /> Sim
-                        <input type="radio" id="sacerdocio" name="sacerdocio" value="nao" /> Não
+                        <input type="radio" id="sacerdocio_sim" name="sacerdocio" value="sim" checked /> Sim
+                        <input type="radio" id="sacerdocio_nao" name="sacerdocio" value="nao" /> Não
                     </div>
 
                     <div class="form-input" id="div-quimbanda">
                         <label form="quimbanda">Membro da Quimbanda? </label>
-                        <input type="radio" id="quimbanda" name="quimbanda" value="sim" /> Sim
-                        <input type="radio" id="quimbanda" name="quimbanda" value="nao" checked/> Não
+                        <input type="radio" id="quimbanda_sim" name="quimbanda" value="sim" /> Sim
+                        <input type="radio" id="quimbanda_nao" name="quimbanda" value="nao" checked/> Não
                     </div>
 
 
                     <div class="form-input" id="div-cabolco">
                         <label for="caboclo">Caboclo-Chefe: </label>
-                        <input type="text" id="caboclo" nome="caboclo" />
+                        <input type="text" id="caboclo" name="caboclo" />
                     </div>
 
                     <div class="form-submit" id="div-submit">
