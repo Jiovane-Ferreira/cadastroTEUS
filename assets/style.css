@@ -32,19 +32,19 @@
 
 }
 
-.form-container .form-box {
-   
+.form-container .form-box {  
     width: 600px;
 }
 
-.form-box .linha-um {
-    display: flex;
+.form-box .linha-um,
+.form-box .linha-dois,
+.form-box .linha-tres {
     
+    display: flex;
+
 }
 
-.form-box .linha-dois {
-    background-color: chocolate;
-} 
+
 
 #div-submit {
     text-align: center;
