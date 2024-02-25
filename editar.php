@@ -1,16 +1,31 @@
+<?php 
+
+require_once "database/config.php";
+
+$lista =[];
+$sql = $pdo->query("SELECT * FROM mediuns");
+if($sql->rowCount() > 0 ) {
+
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Criação de Personagem</title>
+    <title>Editar Cadastro de Mediuns</title>
     <link rel="stylesheet" type="text/css" href="assets/style.css" media="screen" >
 </head>
 <body>
     <div class="main-container">
         <div class="header"></div>
         <div class="form-container">
-            <div class="form-title"><h1>Formulário de Cadastro de Médiuns</h1></div>
+            <div class="form-title"><h1>Editar Cadastro de Médiuns</h1></div>
             <div class="form-box">
                 <form method="post" action="database/adicionar.php" id="cadastro">
 
@@ -64,8 +79,43 @@
 
                 </form>
             </div>
-        </div>
 
+            <div class="container-table">
+                <table class="table-medium" id="table-medium">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th>Email</th>
+                            <th>Aniversario</th>
+                            <th>Sacerdocio</th>
+                            <th>Quimbanda</th>
+                            <th>Caboclo Chefe</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    
+                    <?php foreach($lista as $medium): ?>
+
+                        <tr>
+                            <td><?php echo $medium['id']; ?></td>
+                            <td><?=$medium['nome']; ?></td>
+                            <td><?=$medium['sobrenome']; ?></td>
+                            <td><?=$medium['email']; ?></td>
+                            <td><?=$medium['aniversario']; ?></td>
+                            <td><?=$medium['sacerdocio']; ?></td>
+                            <td><?=$medium['quimbanda']; ?></td>
+                            <td><?=$medium['caboclo']; ?></td>
+                            <td><a href="editar.php?id=<?=$medium['id']; ?>">[ Editar ]</a></td>
+                            <td><a href="excluir.php?id=<?=$medium['id']; ?>">[ Excluir ]</a></td>
+                        </tr>    
+                        
+                    <?php endforeach; ?>
+                    
+                </table>
+            </div>
+        </div>
     </div> 
 </body>
 </html>

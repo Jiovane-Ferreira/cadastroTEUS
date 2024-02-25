@@ -51,9 +51,13 @@
 }
 
 #div-submit input {
+    margin-top: 1rem;
     width: 150px;
+    background-color: #993399;
+    color: #FFF;
+    height: 25px;
     border: 1px darkblue solid;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 
@@ -61,3 +65,14 @@
     margin: 5px;
 }
 
+.container-table {
+    margin-top: 2rem;
+}
+
+.table-medium {
+    text-align: center;
+    border: 0.5px #D7D7D7 solid;
+}
+.table-medium td {
+    padding: 3px;
+}

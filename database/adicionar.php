@@ -26,7 +26,8 @@ if ($nome && $sobrenome && $email) {
             aniversario, 
             sacerdocio, 
             quimbanda, 
-            caboclo)
+            caboclo,
+            email)
             
             VALUES(
             :nome,
@@ -34,7 +35,8 @@ if ($nome && $sobrenome && $email) {
             :aniversario,
             :sacerdocio,
             :quimbanda,
-            :caboclo
+            :caboclo,
+            :email
             )");
 
         $sql->bindValue(":nome", $nome);
@@ -43,18 +45,19 @@ if ($nome && $sobrenome && $email) {
         $sql->bindValue(":sacerdocio", $sacerdocio);
         $sql->bindValue(":quimbanda", $quimbanda);
         $sql->bindValue(":caboclo", $caboclo);
+        $sql->bindValue(":email", $email);
 
         $sql->execute();
 
-        header("Location: ../index.html");
+        header("Location: ../index.php");
         exit;
         
     } else { 
-        header("Location: ../index.html");
+        header("Location: ../index.php");
         exit;
     }
 
 } else {
-    header("Location: ../index.html");
+    header("Location: ../index.php");
     exit;
 }
