@@ -108,7 +108,7 @@ if($sql->rowCount() > 0 ) {
                             <td><?=$medium['quimbanda']; ?></td>
                             <td><?=$medium['caboclo']; ?></td>
                             <td><a href="editar.php?id=<?=$medium['id']; ?>">[ Editar ]</a></td>
-                            <td><a href="excluir.php?id=<?=$medium['id']; ?>">[ Excluir ]</a></td>
+                            <td><a href="../database/excluir.php?id=<?=$medium['id']; ?>" onclick="return confirm('Deseja mesmo excluir essa pessoa?')">[ Excluir ]</a></td>
                         </tr>    
                         
                     <?php endforeach; ?>
