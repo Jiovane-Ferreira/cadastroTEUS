@@ -47,7 +47,9 @@ if ($id) {
         <div class="form-container">
             <div class="form-title"><h1>Editar Cadastro de Médiuns</h1></div>
             <div class="form-box">
-                <form method="post" action="database/adicionar.php" id="cadastro">
+                <form method="post" action="database/update.php" id="cadastro">
+
+                    <input type="hidden" id="hidden_id" name="id" value="<?=$info['id']; ?>" />
 
                     <div class="linha-um" id="linha-um-form">
                         <div class="form-input" id="div-nome">
