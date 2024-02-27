@@ -79,42 +79,6 @@ if($sql->rowCount() > 0 ) {
 
                 </form>
             </div>
-
-            <div class="container-table">
-                <table class="table-medium" id="table-medium">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>Sobrenome</th>
-                            <th>Email</th>
-                            <th>Aniversario</th>
-                            <th>Sacerdocio</th>
-                            <th>Quimbanda</th>
-                            <th>Caboclo Chefe</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach($lista as $medium): ?>
-
-                        <tr>
-                            <td><?php echo $medium['id']; ?></td>
-                            <td><?=$medium['nome']; ?></td>
-                            <td><?=$medium['sobrenome']; ?></td>
-                            <td><?=$medium['email']; ?></td>
-                            <td><?=$medium['aniversario']; ?></td>
-                            <td><?=$medium['sacerdocio']; ?></td>
-                            <td><?=$medium['quimbanda']; ?></td>
-                            <td><?=$medium['caboclo']; ?></td>
-                            <td><a href="editar.php?id=<?=$medium['id']; ?>">[ Editar ]</a></td>
-                            <td><a href="../database/excluir.php?id=<?=$medium['id']; ?>" onclick="return confirm('Deseja mesmo excluir essa pessoa?')">[ Excluir ]</a></td>
-                        </tr>    
-                        
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
         </div>
     </div> 
 </body>

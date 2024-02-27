@@ -4,20 +4,24 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
 .main-container {
-    background-image: url(/assets/images/devon-mackay-DkbJeXOO644-unsplash.jpg);
-    background-color: #993399;
+    background-color: rgba(153, 51, 153, 1);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
 }
 
 .form-container {
-    border: 3px #993399 solid;
+    border: 3px red solid;
     border-radius: 10px;
-    background-color: #FFF;
+    background-color: rgba(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,4 +79,21 @@
 }
 .table-medium td {
     padding: 3px;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .main-container {
+        overflow-y: hidden;
+    }
+
+    .form-container {
+        min-width: auto;
+        width: 100vw;
+    }
+
+    .form-container .form-box {
+        width: auto;
+    }
+
 }
