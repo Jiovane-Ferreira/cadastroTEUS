@@ -4,13 +4,25 @@
         overflow-y: hidden;
     }
 
+
     .form-container {
         min-width: auto;
         width: 100vw;
+        margin: 6px;
+    }
+
+    .form-container .form-title {
+        text-align: center;
     }
 
     .form-container .form-box {
         width: auto;
     }
+
+    .div-fieldset {
+        margin: 0 5px 0 5px;
+    }
+
+    
 
 }
