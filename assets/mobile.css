@@ -1,0 +1,16 @@
+@media only screen and (max-width: 767px) {
+
+    .main-container {
+        overflow-y: hidden;
+    }
+
+    .form-container {
+        min-width: auto;
+        width: 100vw;
+    }
+
+    .form-container .form-box {
+        width: auto;
+    }
+
+}
