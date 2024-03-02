@@ -92,28 +92,51 @@ fieldset legend {
 }
 
 .view-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.view-container .titulo-view {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+    color: #FFF;
+}
+
+
+.table-medium-view {
+    background-color: #FFF;
     border: 3px solid red;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255);
-    width: calc(100% - 30%);
-    min-height: 600px;
-
+    display: inline-block;
+    text-align: center;    
 }
 
-.view-head {
+.tr-view {
+    word-wrap: break-word;
+    padding: 3px;
+}
+
+.table-medium-view tbody tr:nth-child(even) {
+    background-color: #FFF;
+}
+
+
+.table-medium-view tbody tr:nth-child(odd) {
+    background-color: #D7D7D7;
+}
+
+.btn-mostrar-view {
     display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-}
-.view-head #div-th-nome {
-    background-color: green;
+    justify-content: center;
 }
 
-.view-head #div-th-aniversario {
-    background-color: gold;
-}
-
-.view-body {
-    display: flex;
-    justify-content: space-between;
+.btn-view {
+    margin-top: 1rem;
+    width: 150px;
+    background-color: #FFF;
+    color: #00;
+    height: 25px;
+    border: 1px darkblue solid;
+    border-radius: 4px;
+    cursor: pointer;
 }
