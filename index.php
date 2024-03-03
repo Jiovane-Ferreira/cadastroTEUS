@@ -67,7 +67,7 @@ if($sql->rowCount() > 0 ) {
                                 <div class="form-input" id="div-sacerdócio">
                                     <label form="sacerdocio">Possui Sacerdócio? </label>
                                     <input type="radio" id="sacerdocio_sim" name="sacerdocio" value="sim" checked /> Sim
-                                    <input type="radio" id="sacerdocio_nao" name="sacerdocio" value="nao" /> Não
+                                    <input type="radio" id="sacerdocio_nao" name="sacerdocio" value="não" /> Não
                                 </div>    
                             </div>
                     
@@ -85,7 +85,7 @@ if($sql->rowCount() > 0 ) {
                             <div class="form-input" id="div-quimbanda">
                                 <label form="quimbanda">Membro da Quimbanda? </label>
                                 <input type="radio" id="quimbanda_sim" name="quimbanda" value="sim" /> Sim
-                                <input type="radio" id="quimbanda_nao" name="quimbanda" value="nao" checked/> Não
+                                <input type="radio" id="quimbanda_nao" name="quimbanda" value="não" checked/> Não
                             </div>
 
                             <div class="form-input" id="div-exu-frente">

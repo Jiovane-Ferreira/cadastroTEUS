@@ -45,6 +45,7 @@ if($sql->rowCount() > 0 ) {
                             <th><div class="th-view" id="div-th-caboclo"><p>Caboclo-Chefe</p></div></th>
                             <th><div class="th-view" id="div-th-quimbanda"><p>Quimbanda</p></div></th>
                             <th><div class="th-view" id="div-th-exu"><p>Exu/Pombagira Frenteiro</p></div></th>
+                            <th colspan="2"><div class="th-view" id="div-th-action"><p>Ações</p></div></th>
                         </tr>
                     </div>
                 </thead>
@@ -59,6 +60,8 @@ if($sql->rowCount() > 0 ) {
                             <td><div class="tr-view"><?=$medium['caboclo']; ?></div></td>
                             <td><div class="tr-view"><?=$medium['quimbanda']; ?></div></td>
                             <td><div class="tr-view"><?=$medium['exu_frenteiro']; ?></div></td>
+                            <td><div class="tr-view"><a href="editar.php?id=<?=$medium['id']; ?>"><button class="btn-action">editar</button></a></div></td>
+                            <td><div class="tr-view"><a href="../database/excluir.php?id=<?=$medium['id']; ?>"><button class="btn-action">excluir</button></a></div></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
