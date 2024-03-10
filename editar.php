@@ -18,14 +18,14 @@ if ($id) {
 
     } else {
         
-        header("Location: index.php");
+        header("Location: view.php");
         exit;
 
     }
 
 
 } else {
-    header("Location: index.php");
+    header("Location: view.php");
     exit;
 }
 
@@ -47,7 +47,8 @@ if ($id) {
         <div class="form-container">
             <div class="form-title"><h1>Formulário de Cadastro de Médiuns</h1></div>
             <div class="form-box">
-                <form method="post" action="database/adicionar.php" id="cadastro">
+
+                <form method="post" action="database/update.php" id="cadastro">
 
                     <input type="hidden" id="hidden_id" name="id" value="<?=$info['id']; ?>" />
 

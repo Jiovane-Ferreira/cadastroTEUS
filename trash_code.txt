@@ -1,35 +1,33 @@
-<div class="container-table">
-                <table class="table-medium" id="table-medium">
-                    <thead>
+     <table class="table-medium-view" id="table-medium">
+                <thead>
+                    <div class="view-head">
                         <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>Sobrenome</th>
-                            <th>Email</th>
-                            <th>Aniversario</th>
-                            <th>Sacerdocio</th>
-                            <th>Quimbanda</th>
-                            <th>Caboclo Chefe</th>
-                            <th>Ações</th>
+                            <th><div class="th-view" id="div-th-id"><p>ID</p></div></th>
+                            <th><div class="th-view" id="div-th-nome"><p>Nome</p></div></th>
+                            <th><div class="th-view" id="div-th-aniversario"><p>Data de Aniversário</p></div></th>
+                            <th><div class="th-view" id="div-th-email"><p>Email</p></div></th>
+                            <th><div class="th-view" id="div-th-sacerdocio"><p>Sacerdócio</p></div></th>
+                            <th><div class="th-view" id="div-th-caboclo"><p>Caboclo-Chefe</p></div></th>
+                            <th><div class="th-view" id="div-th-quimbanda"><p>Quimbanda</p></div></th>
+                            <th><div class="th-view" id="div-th-exu"><p>Exu/Pombagira Frenteiro</p></div></th>
+                            <th colspan="2"><div class="th-view" id="div-th-action"><p>Ações</p></div></th>
                         </tr>
-                    </thead>
-                    <tbody>
+                    </div>
+                </thead>
+                <tbody>
                     <?php foreach($lista as $medium): ?>
-
                         <tr>
-                            <td><?=$medium['id']; ?></td>
-                            <td><?=$medium['nome']; ?></td>
-                            <td><?=$medium['sobrenome']; ?></td>
-                            <td><?=$medium['email']; ?></td>
-                            <td><?=$medium['aniversario']; ?></td>
-                            <td><?=$medium['sacerdocio']; ?></td>
-                            <td><?=$medium['quimbanda']; ?></td>
-                            <td><?=$medium['caboclo']; ?></td>
-                            <td><a href="editar.php?id=<?=$medium['id']; ?>">[ Editar ]</a></td>
-                            <td><a href="../database/excluir.php?id=<?=$medium['id']; ?>" onclick="return confirm('Deseja mesmo excluir essa pessoa?')">[ Excluir ]</a></td>
-                        </tr>    
-                        
+                            <td><div class="tr-view"><?=$medium['id']; ?></div></td>
+                            <td><div class="tr-view"><?=$medium['nome'] ." ". $medium['sobrenome']; ?></div></td>
+                            <td><div class="tr-view"><?=$medium['aniversario']; ?></div></td>
+                            <td><div class="tr-view"><?=$medium['email']; ?></div></td>
+                            <td><div class="tr-view"><?=$medium['sacerdocio']; ?></div></td>
+                            <td><div class="tr-view"><?=$medium['caboclo']; ?></div></td>
+                            <td><div class="tr-view"><?=$medium['quimbanda']; ?></div></td>
+                            <td><div class="tr-view"><?=$medium['exu_frenteiro']; ?></div></td>
+                            <td><div class="tr-view"><a href="editar.php?id=<?=$medium['id']; ?>"><button class="btn-action">editar</button></a></div></td>
+                            <td><div class="tr-view"><a href="../database/excluir.php?id=<?=$medium['id']; ?>"><button class="btn-action">excluir</button></a></div></td>
+                        </tr>
                     <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>

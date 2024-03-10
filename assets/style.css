@@ -94,39 +94,15 @@ fieldset legend {
 .view-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 8px;
 }
 
 .view-container .titulo-view {
     text-align: center;
     margin: 1rem 0 1rem 0;
     color: #FFF;
-}
-
-
-.table-medium-view {
-    background-color: #FFF;
-    border: 3px solid red;
-    border-radius: 10px;
-    display: inline-block;
-    text-align: center;    
-}
-
-.view-head .th-view {
-    text-align: center;
-}
-
-.tr-view {
-    word-wrap: break-word;
-    padding: 3px;
-}
-
-.table-medium-view tbody tr:nth-child(even) {
-    background-color: #FFF;
-}
-
-
-.table-medium-view tbody tr:nth-child(odd) {
-    background-color: #D7D7D7;
 }
 
 .btn-mostrar-view {
@@ -154,3 +130,27 @@ fieldset legend {
     border-radius: 4px;
     margin: 1px 3px 1px 3px;
 }
+
+.table-container {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr 100px 1fr 100px 1fr 1fr;
+    background-color: #FFF;
+    width: 100%;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.table-header {
+    justify-self: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.table-item {
+    justify-self: center;
+    align-self: center;
+    padding: 3px 5px 3px 5px;
+    text-align: center;
+
+}
+

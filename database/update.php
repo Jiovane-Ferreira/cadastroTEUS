@@ -11,6 +11,7 @@ $aniversario = filter_input(INPUT_POST, "aniversario");
 $sacerdocio = filter_input(INPUT_POST, "sacerdocio");
 $quimbanda = filter_input(INPUT_POST, "quimbanda");
 $caboclo = filter_input(INPUT_POST, "caboclo");
+$exu = filter_input(INPUT_POST, "exu");
 
 if ($nome && $sobrenome && $email) {
 
@@ -21,7 +22,8 @@ if ($nome && $sobrenome && $email) {
     aniversario = :aniversario,
     sacerdocio = :sacerdocio,
     quimbanda = :quimbanda,
-    caboclo = :caboclo
+    caboclo = :caboclo,
+    exu_frenteiro = :exu
     WHERE id = :id");
 
     $sql->bindValue(":id", $id);
@@ -32,10 +34,11 @@ if ($nome && $sobrenome && $email) {
     $sql->bindValue(":sacerdocio", $sacerdocio);
     $sql->bindValue(":quimbanda", $quimbanda);
     $sql->bindValue(":caboclo", $caboclo);
+    $sql->bindValue(":exu", $exu);
     
     $sql->execute();
 
-    header("Location: ../index.php");
+    header("Location: ../view.php");
     exit;
     
 

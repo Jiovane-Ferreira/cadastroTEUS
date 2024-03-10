@@ -31,41 +31,40 @@ if($sql->rowCount() > 0 ) {
             <div class="titulo-view" id="mostrar-medium">
                 <h1>Médiuns Cadastrados</h1>
             </div>
-        
 
-            <table class="table-medium-view" id="table-medium">
-                <thead>
-                    <div class="view-head">
-                        <tr>
-                            <th><div class="th-view" id="div-th-id"><p>ID</p></div></th>
-                            <th><div class="th-view" id="div-th-nome"><p>Nome</p></div></th>
-                            <th><div class="th-view" id="div-th-aniversario"><p>Data de Aniversário</p></div></th>
-                            <th><div class="th-view" id="div-th-email"><p>Email</p></div></th>
-                            <th><div class="th-view" id="div-th-sacerdocio"><p>Sacerdócio</p></div></th>
-                            <th><div class="th-view" id="div-th-caboclo"><p>Caboclo-Chefe</p></div></th>
-                            <th><div class="th-view" id="div-th-quimbanda"><p>Quimbanda</p></div></th>
-                            <th><div class="th-view" id="div-th-exu"><p>Exu/Pombagira Frenteiro</p></div></th>
-                            <th colspan="2"><div class="th-view" id="div-th-action"><p>Ações</p></div></th>
-                        </tr>
+            <div class="table-container">
+                <div class="table-header">ID</div>
+                <div class="table-header">Nome</div>
+                <div class="table-header">Aniversário</div>
+                <div class="table-header">Email</div>
+                <div class="table-header">Sacerdocio</div>
+                <div class="table-header">Caboclo</div>
+                <div class="table-header">Quimbanda</div>
+                <div class="table-header">Exu/Pombagira</div>
+                <div class="table-header">Ação</div>
+
+                <?php foreach($lista as $medium): ?>
+                    
+                    <div class="table-item"><?=$medium['id']; ?></div>
+                    <div class="table-item"><?=$medium['nome'] ." ". $medium['sobrenome']; ?></div>
+                    <div class="table-item"><?=$medium['aniversario']; ?></div>
+                    <div class="table-item"><?=$medium['email']; ?></div>
+                    <div class="table-item"><?=$medium['sacerdocio']; ?></div>
+                    <div class="table-item"><?=$medium['caboclo']; ?></div>
+                    <div class="table-item"><?=$medium['quimbanda']; ?></div>
+                    <div class="table-item"><?=$medium['exu_frenteiro']; ?></div>
+
+                    <div class="table-item">
+                        <a href="editar.php?id=<?=$medium['id']; ?>"><button class="btn-action">editar</button></a>
+                        <a href="../database/excluir.php?id=<?=$medium['id']; ?>"><button class="btn-action">excluir</button></a>
                     </div>
-                </thead>
-                <tbody>
-                    <?php foreach($lista as $medium): ?>
-                        <tr>
-                            <td><div class="tr-view"><?=$medium['id']; ?></div></td>
-                            <td><div class="tr-view"><?=$medium['nome'] ." ". $medium['sobrenome']; ?></div></td>
-                            <td><div class="tr-view"><?=$medium['aniversario']; ?></div></td>
-                            <td><div class="tr-view"><?=$medium['email']; ?></div></td>
-                            <td><div class="tr-view"><?=$medium['sacerdocio']; ?></div></td>
-                            <td><div class="tr-view"><?=$medium['caboclo']; ?></div></td>
-                            <td><div class="tr-view"><?=$medium['quimbanda']; ?></div></td>
-                            <td><div class="tr-view"><?=$medium['exu_frenteiro']; ?></div></td>
-                            <td><div class="tr-view"><a href="editar.php?id=<?=$medium['id']; ?>"><button class="btn-action">editar</button></a></div></td>
-                            <td><div class="tr-view"><a href="../database/excluir.php?id=<?=$medium['id']; ?>"><button class="btn-action">excluir</button></a></div></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+                
+            
+                <?php endforeach; ?>
+
+
+
+            </div>
 
             <div class="btn-mostrar-view" id="div-view">
                 <a href="index.php"><button class="btn-view" type="button">Cadastrar Médiuns</button></a>
