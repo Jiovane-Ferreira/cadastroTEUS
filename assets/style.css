@@ -129,6 +129,7 @@ fieldset legend {
     border: 1px darkblue solid;
     border-radius: 4px;
     margin: 1px 3px 1px 3px;
+    cursor: pointer;
 }
 
 .table-container {
