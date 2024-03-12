@@ -76,6 +76,12 @@ fieldset legend {
 
 .form-container .form-box .form-input {
     margin: 5px;
+    height: 30px;
+    
+}
+
+.form-container .form-box .form-input input[type="text"] {
+    border: 1px solid #000;
 }
 
 .container-table {
